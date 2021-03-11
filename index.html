@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: deeppink;
+}
+
+/* Style the header */
+.header {
+  color: #03016dea;
+  background-color:rgb(204, 142, 245)
+  padding: 20px;
+  text-align: center;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCGmfapnnZIBrR21SwaOVjcFQkUyfvIFQTbg&usqp=CAU)
+}
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  float: center;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+/* Style the topnav links */
+.topnav a {
+  float: center;
+  display: block;
+  color: #da0f85;
+  text-align: center;
+  
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgb(75, 7, 58);
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+  color: #03016dea;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+/* Style the footer */
+.footer {
+  background-color: #4f0acf;
+  color: #03016dea;
+  padding: 50px;
+  text-align:right;
+  background-image: url(https://media.istockphoto.com/photos/marble-wall-surface-pink-background-pattern-graphic-abstract-light-picture-id1177337341?k=6&m=1177337341&s=612x612&w=0&h=ClzpFzfDRu5GbpLRh3XC33cF3RJWAEBmC6-7HxL2zcc=)
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Wanizeh's Sweet Shop</h1>
+  <p>enjoy life full of sweets!.</p>
+</div>
+
+<div class="topnav">
+  <a href="index.html">Home page</a>
+  <a href="about me.html">About me</a>
+  <a href="recipes.html">Recipes</a>
+  <a href="international.html">International sweets</a>
+  <a href="Reviews.html">Reviews</a>
+</div>
+
+<div class="row">
+  <div class="column side">
+    <h2>Images</h2>
+    <img src=data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIQEhASEBIQEBAPEBAQDxAPDw8PDxAQFREWFxURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGi0lHR0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAQ8AugMBEQACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAAECAwQGB//EADsQAAEDAQUEBwcDBAIDAAAAAAEAAhEDBAUSITFBUWFxBhMiI5GhsRQyM3KBwdFSsvBCYuHxgqIVksL/xAAaAQACAwEBAAAAAAAAAAAAAAAAAwECBAUG/8QALhEAAgIBBAEDBAIBBAMAAAAAAAECEQMEEiExQRMiMgUzUXEjYYEGQpHwFLHR/9oADAMBAAIRAxEAPwD1RWKiQAkAJACQQJACQAkAJACQAyAEgBIASCBlYBKAEgkZADFACKCBkAMgkZADIA0KCRIASCBIASAEgBIASAEgBQgBIAZACQAykgSAEgBIASCRkAMgBkAMgBFADIAvUEiQAkEDoASAEgBIASAEgBkAJACQAkARKkgSAEgkSAEgB+rKiwIEKU7AZACKAGQAyANCgkSAHDVVySCrEQpTsGqEpIGQAkAJACQAkAJACQAkAMpAaEAJADIAQQQa6rgAudq9Wsa/ZoxwsxvWrTybjbFT7Ip5URQAyAGQBpIVUyzQlJFFlJKyQstF0NUCtBUiZEFcWJACQAkAJACQA0IASAEgBIAZADKSBkAIbFD6BF9UTC85qcUs2eP4Rug0olFQL0GGO2NGST5GbTJ0VnJLshJsYhRHJGXTBxaIq5BFAGppWfHkUnwanjKqlSE8FibGoV80FZY6NbzIVG6K0VqYuxTVCViBKG0uyaEpRAkAMgBIASAEUAMgBlIDFBAyAHZqFEuiUbHtyWeOFJ2NcuDFV1WlCmOXlrCQvP8A13UTw4rg+TZpYpvkooHs555rP/p2U5xcpO+RmsSXRJeoOeMgCyy6LjfSG3hUn2zq5FyZ7YF1y0EY2VCCosvLGmGKFTEFl1DdcGNwpiBhW027byJyQt8DdbmtJKwOiNvqRhj6ryf1nXZIZYQg6/JpwY1Tsk2oF6XSz3Y0zHkxvcSxBaBW1joIEgBkAJADIAZSAyASst6nKUDI42yqi4FwQTLFKJtrHJZ8mVRBRswPKdB2rFsVoPdryv8AqWXsS/s36NFVAdkLT/pyNYLK61+4kvSGEZAGikICw6eCxQUTouVsz1yE15UMjZifCU8wzk13ediXNuT4FZKNtWzHVa8UaQuM0YLW0tzGxMNWGSfBZBeG+a8dr9LLPrIrwismoWD74c5kFpXq8OP04pF9LtyOmYLHeVR2xPNeTSYl5C1ntZOoQc/LpIpWgix0hBy5qmOgqJADIAZ+SLGLFJ9GG12yPdzKk6Wm0fmReLWSyNsKC3opTB9NrwZBUD8jhJUwhTtDiO1ksGowyck/BjnjSXtJYwVux/E584tMe0iWtG9eS+vxeXLDGvLN+k4ViNPCAF3/AKbpP/HxKJl1GTdIiukZxlACq1oXNzZadI6WOJlquKySlOhySMzXSUrHKTfIxoKXdSMyuvhhwIy0kFaui0mWPYLtQyQaodl9iEsWdYVv3itS6lRgvWhjhOGaXJtKLNZg1WGzySkzQ0AFBSW5o2McNik5uRNMkgWJAFdVxAmEGrBhUnyQs3eZFQbZr0+i9lha3YpFvO2YLdScD2dEGrDOLXJQxzlUJqBC2VnRAHBTwy+CEW7ZbZmOa0EnxUmbUQjOVI3VSHNbB7W5cL6l9OlnnGcXTTK4ouHa4Jlh7IdrtXYwwcIpN2Y80bdxL6ha0Q0SdqaU9NpdGLrArEenL8FtOhOa52CG9bmbpOuCq00YCe8KCMrYMGqzSw0+DUlwdFdo7IlbMapGHP2W2l0BMKQQHtD5UGyBsu10sPCVBm1K9xktlTyXPwatZczivA/DjpGdryugP2ohVaSJU2SmlwY6N5FrsJRZObRqUdyDFmr4lY5OXFtNtNsoM8VZrZSEQUGhXHozPoBpkIH+pJqmO6ughQMtWtKixsYNFIcFBdxZaxgOxSijbiYr4Y6WU25BxGI8FbwatK41Kb8F1vu5xwmm/CQNUJlMOpirU1ZKkXgAPOI7TvQZ8ji5e1cGR7ywvdmZ2aoHwXqJQIC1j9JU0N/8V/kP0XwAs+BVBGCStmK21ZThuOBis1KXKKQ+TpB2mQAijDJNsx2irqpHwgYx2p4Ko1raaLDUgOhYdfmeLE2hWSFy5Mu+d6879B9T1Jb1y+R8vFECV68rZCtUyVSYrmwCbO7rJO9WR01ki8dB+xviFZHFzxDVlcpMMEbHBBdMzVWoGxkjK9qgamilwUF0xqVIEwUJEyk0jZaXikGwMyM1xvqP1iGjyKDTbf4MyjLI27LKlNj2h7gCf6ToV0tLqFqMayR+L6IhKcXtGqANEzlC0kpNukDKltp5Z6mApNK0uTn+iZjgoFxUr4I9Qz+FSO9TISNfKJVI8KiiRQ+SrF9xosETmgXkZrtdUME68kFMUd7oyG204JRRo9Gd0abrDajXOGhyQJ1G6EkmB29ZTc4AS0aSl5McZ9m2Xpzim+ywvLxnkVEMMIu0hO9QkQrkgZDJMJxKMuzKXEZnRQPe1qkZhbml0Ia4JeNqNhGm7MIic7I7NdjtJc/Cq7uaKrClHcGnOLVcUkmZbVacstUDsePnkzU6pIzQXlFXwToMxGAgrN7VZvs9ma05jNSJnkckZb1plzmxmIXjPrP0/UajOsmGO6LRbDkjGLUiq32aoabWsMEeEr0v03TPS6aGJ9rsbp8uPe5SXBhfTrBoa7tQMzK3muMsTlaBns1Vz2logNOh2oTSNjzYoxab7NNVjv6s43HairZni1u4Ke+/QfFMpDv4vyM+0S8AaLDKdMz+nUbCgbICn1TNfI9AYTmhZbdIifuXBG2WokhtMF06xmFoiuLY7DiUVc+DHUsNVxwlp7Wp2BWcjSs+OKu+gvY6bqNLABnmqNnPzSjly7mBRVqhxFQiHEwpZvnDHKHs8Gl4gF0ghBnaUnsoyV3vOZ9zXLVQx0VjXC7LqNoa+BBKhCcmCcbdljLDTdiy7SGzO8uRGenIdhOxCFzfFhq7qTddqiuRbyOqIXva6gbFKMZIiY356q8avk1abHjb3T6KLTikAxMZls4SdsKsuHwXhKPaM9YvaqbmWjKDCVwNcQXuynIK8eRGqaT2oMZFS+jF0ZaozaFl0eKWLFGMu/8A6Um7dka+LZotY/Elt5Mz6hGoQPUV4KnP4IDaVUqbWzA1Mmd6kZOcpVfgu6zggXt/sEWOzgEnaCfVZnDg0ZcjCtNuSwStszOVFV4WNxAic9gXQwQ2x5NOnzRXYVsNjDGAAAGE6zHmzOU2/BdUdCkWkY7U8QZMBA7EnfAJqWem6MRmPdzzQbY5MkbaQzbM2CGns81BV5p3b7MlZpa9uYwbQgdialF/k0vtDKYlo8EUJSlN7Wyyz5w7SVFCpKntKK3vycgASSdABqVKFyg5VFeS25bzFSqKTASC3Fizy0kOH9Ou3cpaQ3PoZYcO+T5vovttBzq2bSGt0nQqtchDJGOGk+WU3g45NBILzhy4nerx7L6VJXJ+CLKZYWUXPmo8OLCcTpE71FW7LNqcnmS9q7OjsFLCwNOoGahnOzT3TbRY5pkbpzQUtUUVDL0CX0YfbDje05AOIHIIs6KwrYmvwJ9YSpBY2QNcE7EEvHJKxVHblJVJiEIJ5B9KnEkEOBJMhK2tRovkdvlUE7G2Y3LFDG5ZLESCdKo05AiRqF0KEyjJK2VHHiJHugeKhDFt20+zELeHEtIc1w3hWHvBtSlfBlIc4FtRsAk5zsUWOW2LTgzGGsxQJyyBUDZynt/ZoDYUmV2UWmyioIKBuHK8crROw2PA2HHFzUk5su+W5KgjZrPjMDIAZnggzTntVlF8W1tnENaM4mYh3AzqrKNqxuk07zO2zPcN6YH1Gv6lgd22tZlhaRty2lUdUN1umcoKULdcchavXGHgNqhM5sL3U+zGyu0mAQXRMA5xOqtRoeKSVtcE7bRLgx7A01KTsTMUwd4P82BSGDIo3GXxl2bLJeDKuMMOdM4XA5SY2TmoKZMEsdbvJpp2gHLaFAmUKVmMvzcRvhYPqOeeLA5Q7dL/AJIhFOVMk+kNy3RVJD1Jg6o1xc5pbkfdcFfhGtSioqSY1GwBu0qCs9S5eC0UAgTvY/UhAeowDdZqUQ7rm4GZQZaRrsgq756OhqvTzNem7Z0V1WpjwCxwIPiDuKo4bWc/NhnjdSQQFFk4gIPDaoEb5VRfjCBdMyVi3XJA2O6qMNpqtIInVSPxpp2C2MazQzzUGmcpT7J9cEFNjHFcID02SbXmY0Akk6Ab0Lkt6dGjo+0vqGsZwua5lMbMII7R46+allNbUYLGu1ywrb7Kx4h7WuAz7QBg7wgxYssoO4ugDXuYGoKjCGtwxgDYniT9UPmO06Mda1jcGufyXSKTS0ugHIToJURh+BG15ZWlygRaWtpklruqe7IvJnLcBz3KyfHJ0MTlOC3K0vBu/wDIVWGm0N6xhaMVScyRw2FRZl9DFLc5Pa/wC7WWVKzmNbUpmcQqNkSYz1yQurRsxSnDDvbTXVMJXTedUCox4L3U/dqAHNp9Vk+pZcmLTSyYl7v+8iNRpsbcZxdJ9oJXfVJmc5BK8v8ASfqObUZ/QzPdGX58NGLPijHmPAjaSNQQvZWW9O+hvawdqkq8bH68KSNo4qhBWh8YQFGMOaQQ6CDkZ0IQaFCUXaJ2GyU6IPVjDiMnMnTSJ0Q3ZObLPJ830X0bYTr4qoivBqa6Rqosq6RCoGfqzQmiVJmCtWpt94gKR0YyfRkNtokwCFHAz08iVsQe06BQ5JFG2i0NCNxT1GKnd1S0U39WWt7eAzOYABMeI8FZDo6mGGaclfAXoXeKQaASXNAAJPCEUY56h5G34ZqoOJHaiRrAgEoYmdLoF39VhkMMPJ8lFmnRczuS4QMoM6xjRWbiIO/MbswrJmvJlWObeLgvtF3sqAggEHbt8VDVmeGonB2mKz2QsETi5iCpJzZlkd0VWrGeyxs4iGlwzwz6KUN06xpuUn0E7FZAwQJzM5mUMyZszyO2aqVANxEbfJczB9LwYM8s8FzL/hfmhM8snSIPAK3llkaBF4PawwRJOkZK0VZuwtzVg7rymKCHuKCF1t6wmSctk6qko0Y9TLYuEFupCqYfUkcnbmVhUBxsFOYwyQ4kjTn9UxddHo9PPFLG1te78lTrNaesYWtdgYZaHObGes5yr3Hkb6un9OSb5f8A3g6SjTO1KOE6vgnRfEjiqNEZExq2arRVSaOPvEw9wk6p0VwdnC7gmYXOUuKGnRXY/sNKQ1ycnP8ANm9jzlGuzmpXAm6dh257KbOzCXYpcXydkxI4phXU5VmnuSrijVVqgoEJNFYfExtUMGrBdooY3EujlkYCijVjyOEdsStlkaIwk/8AtIKtRaWWT7RGtTdBwkzsQRGUW+UC7ZeVRhY1pBLo1E6DNQuWkdPFpMc02/Aasz3YW4hmR2oCuzmZYRUmom2m47j9clAhxJPd2TzVWKfyKCVUkCX9q0puNHQ0b4aBWNOo1sLXC/N3IJeRGDWLhBvGlHPBVewU6hBdJLTIgkAnjvTE2ujqYtTPHFqPk2iFAjlifVyyVS8YfkEW+9KdERUJDyJDWgk/hFWasWmnm5guCdltvWMa8A4TrOoVZKhGbT7JbfJz1/CKh4iUyHRu0juAIdUVzSzo7kfiptHGEiXZytSqmdXYLGGvYTrJgE5kxuVY/wBmSTtOg05qYZ0zDaKcZyBJgSQM9yB8eTK6oRqEF/Tvopq1J2oJh7XZkoBzGhuLEBPqpsbmmsktyVFFst7mmGxOWvMBTFJsfpdPGduRrFhplwLhiIOJs6DkooU9TkiqXASY4IMjtljaiGRtZlrWtsxI3xKxzzwc/TT57GQwyfuoz+0jEQTuhWxz5pkzxPbaBt/nJp4rZi7GaPtgYOTjewxcPvO5JeQwaz4oPYUo5xhFEjarG/cvwTDN6gjcywNAUEcsx22ix2Za0kZAkAkckGnHOUVSfBBjYBnSFDKds5W93zB3FzfBThd2b8CrgEuKcPOl6K2nCG5e9UDZ4wSPys2R1JGDUw3X+joqtoqB2JjC8t0zwiZzzO1V5sRjhHZUnVh6jaZE79+wphinjpnMdIbQatQNb8OkRMfrJTL2x/Z19HCOLFul2/8A0G7Mzsw7MxJJ2qhzJS5tEKlnadnhkgssjMVosZnsuy4iSoHQyR8oE2yzFocSWnNu8HVXx9nR084+AuWOG1saaGfVVOe3H8FFsoPe1zcZbIjs5HxQTiywhJOgJTr2qx5PBq0RtBmB6j0VrT7Ont0+q+L2yDtltFC1tiAcpLXCHDiD+FVwSd0c7Ljz6WVmK10HU6jWg4gcmk65bD+VhnjkpqvI2GRTg5Me/BLJ4rfj4Zk0rqdARi0HQYXuL3zyVMnRh1nxOhxJJzAVTD2l2P3RBbmCYjPRWdeDsZHjaW3s0Mef9qDO6Hc4nJQWi0ipzDtQS5WYL1rOaBAOE6ugxG3NUdvhDMSTfZzNrJcxztz/ALJyVOjd1NL+gY4q40O9Gu22owGHAtqsO59Mz5jEPqkZVfRi1D2zT/wegWK0se0SROh5o67OdkxyizT1H+OCkpvMtosjQHS0QTidA1I2lQMU3LyUCpE6Z67+CLJcGLrfv9EWV2kBUy3naYhSFcmS3WPrAAHAaTIMKYyo16fP6V2jUBGpUGaTbZNgCCrTJPA2xG1DCN3wRu6yMaSaTGtnJzgIB4KFIvqM82qm/wDBjt9nc2pLi0gjsRMjeTu/2phHmxmLJGUKXjsovVk0zwUx7E6d/wAhz7CtB1GFrjPefRUydGPV/A6GEk5Zjc1xBBO0xAiB+VKN9pO0hNaGNAxaCAXGSTvO8o6IbcpXRE26mNs8gSEJMsscmPZSKhLplrcgN51kqjTsXlbgtvllV/v7ir8v3CmHaI0n3YnGMzoVD/efQK7+R1Zusy/QJcrmgLdGKuGp9YPI5JczHq1wdPYq8SNxLT9CrtWis1aTOpsroaIJMgGTrmk9HIySbkyVWrthTZMJW6AtrttEOmJdtLPQmc1O2zdBZKrwU07XTcYDi0nY8ZeKhxZemu0aTZn7C3xy9FVlHkxLsm2gdpb/AD6IEvU476ZXXpuaJJaBtOcI5GQy45dGL2o7DPGI8kxY/wAjmr8EmHGQCT2i0GHEbVMoJolycVa8HS02hoAAgAQAqI40m5O2CL5f3jRua3zJTI/Fm7TqsTZkt4mm7kqR7KYXU0zmKZWk7DC1yO7z6KmTox6tew6WUk5RSqIb6sgHery1+GTEA+OxNgr5OhgalGzEXJo9Bi4Xdh/z/wDyEqa5MOt+S/RX0id3FXkPUKseyuk+7E5i72TZ3/M70CmfyN+Z1mQEcmG03XI7tlLn0ZtV8ToGVYqO4w7xGfnKZDmIvG7xo667KuKkw8I8DCTJcnJ1CrIzQ8qolHGPMEjdIWg7i6Ky5BNB+5Kk08yTDiMzMaJM+zl6tVkCAKqZqMl8O7o82+qvDs0aX7iAjKiedKjbYnTUZ87fVQ1wLy/B/o6iUg44BvB01zwwj/qm/wCw6MOMA1cS13JKQiD9yOUGp5rUdrwFLlPeDkqT6MmqXsOnlIOTRSCoSABX6YqN4sHkSnY1wdLR/B/sH4002Bbo+7s1PmHok5OzBrfkhukPwKnIeoVYfJFNJ92IFuRk0XcXO+yifyNepdZUAa9OHOHEpiN8HaRfc47xVn0K1K9gZtJwvZxBHgZ+6nE+KM2ndxaOp6PvlhG50/Qj/BUZFyYdbGpphN6WYzjLwbhqVB/e71WiPR28UrgmZC4qaGB3o9U7D+D/ALBKyrk5ut+a/QVD0sxmS+X90ebfVXx9mjS/dQEplaDphC7TNWn8yrLoTn4xs6gLOckAVTNZ/wAx8sk2XEEdB8YUXOEg8kmzMuzlKwhzuZWqL4O3D4o33QR1jVWfRn1PwZ1MhZzkWYcSkgD9IR2qZ4OHmPynYzoaJ8MGgphuDHR7Spzb90rL4MOu7Q/SH4FTkPUKkexek+7EFXAD1OX6nKuTs0at/wAhhtV11HOJyzKlS4HQ1KSoexXY5jg4lEnaIy6jdGjbejIa136XDwOX4Rj4YrTS91BnovWzcN7QfA/5TMnQvXR9qZ0JKUc05O/GxVfxg/8AULRD4nW0rvGgYSrmgMdHDlUG4tPkfwk5ezn67uIaCUYDHfPwnc2/uV4dmnSfdQEpLQdNhS5x3rP+X7Sqz6Eal/xs6cFZzlHPWcYn1DvcT4kpmTpI6OfiEUauqCVRksyuu5hMwrWx6zyS7LqFjY05BDYuWST7ZthRQkxsahEAzpE3KmdxcPIfhMxm7QvloDwmnRQX6On4v/D7pWUxa7/aS6RHuKnIeoVI9itJ91Au4akUR8zvVVn8jRq1/IbHVgqiEiPWhBNFVuGJjhwkcxn9laPZOJ7ZplnRyrFRnGR4hPn8TRq43jf9HYJBxjm+kNPvAd7B5Ep2Po6Wjfs/yBXtTTYFOjh7VUcGHzKVkMOu6iHAlHOMt8/Bdzb+4K+P5GjS/dQEplPOoFLj+KODXHyVMnxM+r+2dG90AncCfJIOYuWAbrzDjxTMhv1XDSCASzIRQBIIAslBUyhBAPv9vdtO5482lMx9mvRP3v8AQChNOoFejutXk37pWTwY9d1El0j+BU5D9wVI9idH91AO6T3Y5n1VZ9mrU/cNL3KohEcSCS1r0FSm6n4Ht/sePIrV3E3ZFug/7R30LOcEBdI6edM/MPRNxG7RPtAGoE03o29Hx23jez0IS8nRk1vwX7D4CUcwyXz8F3Nv7gr4/kaNL91AJhTzqhbo/wDEPBh9Ql5OjLrPt/5DdudFOof7HeiUuzBiVzX7A91+5zKtk7Neq+ZuBVDKNKCRw5BBOUEEQEEGK+2TSPBzT5x91aHZp0j/AJDniE86qCfR73qnyt9Sl5THruok+knwKnIeoS49idH91AG6G92OZ9VWfZp1L95pqBVEplTigkY1IQRQ9I9s8Yd4haIdG3HzBHe2V+JjDvaD5JTOJkVSaMPSCnLGnc71BV8fZo0b97X9HN1Gpx0karj+LzY71Cpk6M2sX8f+Q/hSDlmK+x3Lubf3BXh2adJ91ABi0HWoM9HR23ncz7/4S8vRi1vxX7CV7vijU5AeJCXHsyaZXlRmuxndN4yfNE3yX1LvIzQVUQVkoLCEnQIILepd/JQRaLQ1QVMt7Mmi/kD4EK8Ox+mdZUcs5POyEej57dT5R6pWXoya74os6RDuKnL7hLi+TNpHWVAW62kMAPNRLlmjPJSm2aHtVRKZWaaAsb2eUBuIYMLm8o88vVNxPwatPK00dtcb5os4SPAqJ9nO1UayslfDJpO4QfNEOw0zrIjmHtWg6pdc4is3iHDyVMnQnVr+JnQ4Ug5Jivpvcu5t/cFeHyNGk+6jm2p52A10b1qHg37peVmDX9RNt9AmmWjVzmjzS4vky6aSjO34K7M0taBuEIYZHubZpbRceHNQKbRcyy/woKuRpp0QEFbLYQBjLVBcot7Zp1Pkd6KU+UMw8ZI/s5Fy0WdxFl1Xgym90kklsBrRicTIygfdKyvgya2nFG+tirDtjC3UM1J4uP2SUc6LpkGUNwVhjkO6zqCFIiLKponcWssqiiLKrTdxdBGThofsVaPHQzHl2O0Gej7yxrmVBhOKRPumRsKJOymqmpyTQTt1PFTeN7Soi+ROJ1NM5SoxabO0iy7GxWZzP7SqT6FalfxM6QtSLOOD77+C7m39wVoPk06T7qOWxZwAXHc0Fzj9Bmn2ddtR7dB24bPVaHksLA6ILyAYE/067dsJU3Zy9ZmjNrb4DIoDbJVDFdE2UwNBCkhyLA1FEEgFIEkAJAGEWgQMnkwMgxyoMfDMtrq1nAtZRiQRNV4aMxubM+SFZMXTs58dG6jvi1SR+mn2G/nzV3Js1y1Un/QSsVzMpe6APVQIlOzd7MoKWRbZwgLJmgpCxCggLJtohBFkxSCAsvptUFWSwiCBlO4kDwRQLhg512tO13iD9lfczWtVND0LsDXNcHO7Jn+n8Icm0E9VKUXF1yESOJ8lSjHZTVoMeIeMQ3OJjwQuCYzcXaZOlTawQxrWjc1oaPJWKubfbJhFEWSAQQSAQSOgB5UAMSgCMoAlhQXIliCCo00FrIdUgLHNJBBE0juQTY/VHcgixuqKAscU+IQRY8DegLEKjRtQRuEbQEEWR69FBYutP8zRRA4k6qQJgIAkEASCAHlAE2tP+0Ej4FADFAFZQBGUAVe2IJG9tQA3tqAsibaUEWRNtKAsibWUBZE2lyKCyJrHeiiBsRUgOAgCQagCYagCbWoAmAgCYQBIIAsbSJ4c1FgWtobygksawBQA5CAIEIAiWoAiWoAjgUgCiFIEYQA2FQQLCpAWFACwoAcNQBIBAEgEASAUASAQBY1iALmWYncEAXNsu8+CALG0GjZPNRYFgG5BI6AEgBIASAGhSBEhADEIAaEAf//Z alt="strawberry cupcake"> <weight:100></weight:100>
+  </div>
+  
+  <div class="column middle">
+    <h2>Main Content</h2>
+    <p> Watch all videos and keep up with all the posts to learn new ways on how to make homemade sweets.</p>
+    <p> Enjoy quarantine and keep yourself busy!!</p>
+    <p> with new fun ways of making sweets.</p>
+
+  <div class="column side">
+    <h2>contexts:</h2>
+<li>Main Page:</li>
+<li> New trends:</li>
+<li> Equipments used:</li>
+<li> international sweets:</li>
+<li>Contents:</li>
+</div>
+
+<div class="footer">
+  <p>Wanizeh Malik 2020</p>
+  <p>contact us: 718-476-0987</p>
+  <p>follow us on the following:
+      <li> @Wsugary_sweets</li>
+  </p>
+</div>
+  
+</body>
+</html>

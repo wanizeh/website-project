@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  background-color: deeppink;
+}
+ 
+/* Style the header */
+.header {
+  color: #03016dea;
+  background-color:rgb(204, 142, 245)
+  padding: 20px;
+  text-align: center;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCGmfapnnZIBrR21SwaOVjcFQkUyfvIFQTbg&usqp=CAU)
+}
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  float: center;
+  display: block;
+  color: #fa11ac;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ 
+ 
+/* Style the topnav links */
+.topnav a {
+  float: center;
+  display: block;
+  color: #fa11ac;
+  text-align: center;
+  
+}
+ 
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgb(75, 7, 58);
+}
+ 
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: center;
+  padding: 10px;
+}
+ 
+/* Left and right column */
+.column.side {
+  width: 25%;
+  float: center;
+}
+ 
+/* Middle column */
+.column.middle {
+  padding: 50px;
+  border-style: solid;
+  text-align: center;
+  padding: 50px;
+  text-align: center;
+  float: right;  
+  color: #03016dea;
+  width:50%;
+  background-image:url(https://media.istockphoto.com/photos/marble-wall-surface-pink-background-pattern-graphic-abstract-light-picture-id1177337341?k=6&m=1177337341&s=612x612&w=0&h=ClzpFzfDRu5GbpLRh3XC33cF3RJWAEBmC6-7HxL2zcc=)
+}
+ 
+ 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ 
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+/*style the column side*/
+.column.side{
+  text-align: left;
+  float: left;
+}
+ 
+ 
+/* Style the footer */
+.footer {
+  background-color: #4f0acf;
+  padding: 50px;
+  text-align: center;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrAiYI_bMXeXK8ZfLNEN5f5uQoRA64Jd9pQg&usqp=CAU)
+ 
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Recipes! !</h1>
+  <p>enjoy life full of sweets!.</p>
+</div>
+ 
+<div class="topnav">
+  <a href="index.html">Home page</a>
+  <a href="about me.html">About me</a>
+  <a href="recipes.html">Recipes</a>
+  <a href="international.html">International sweets</a>
+  <a href="Reviews.html">Reviews</a>
+</div>
+
+<div class="column middle">
+<h2>Reciepes for strawberry shortcake cupcakes!</h2>
+<p>INGRIDENTS!</p>
+<p>Servings: 24  cupcakes</p>
+<p>For the cupcakes</p>
+ <li>▢1 cup butter softened</li> 
+  <li>▢2 cups granulated sugar</li>
+  <li>▢4 eggs room temperature</li>
+  <li>▢1 teaspoon vanilla</li>
+  <li>▢2 and 3/4 cups all purpose flour</li>
+  <li>▢2 teaspoons baking powder</li>
+ <li>▢1 cup milk room temperature</li> 
+  <p>For the Buttercream</p>
+  <li>▢1 cup 2 sticks butter, softened</li>
+  <li>▢3 and 1/2 cups powdered sugar</li>
+  <li>▢2-4 tablespoons heavy cream or milk</li>
+  <li>▢1 teaspoon vanilla</li>
+  <li>▢pinch of salt</li>
+  <p>For the Strawberry filling</p>
+ <li>▢3-4 cups finely diced strawberries</li> 
+  <li>▢1 tablespoon granulated sugar</li>
+ 
+<div class="column side">
+<img src="https://i.pinimg.com/originals/0a/ea/7b/0aea7b28def03d6de643654648e9ffdd.jpg"alt="strawberry cupcake"> <weight:"100"></weight:100>
+ 
+ 
+</div>
+ 
+<div class="column left">
+<h3>Recipe!</h3>
+<p>Strawberry Shortcake Cupcake Recipe</p>
+<ol>
+ <li>Preheat the oven to 350 F. Line 2 cupcakes pans with 24 cupcake papers. In a stand mixer, cream the butter and sugar on high for 2-3 minutes or until light-colored and fluffy. Beat in the eggs one at a time. Beat in the vanilla.</li>
+<li> In a separate bowl, whisk together the flour and baking powder. Alternately add the dry ingredients to the wet ingredients with the milk in three parts, stirring just until combined and scraping down the sides as necessary.</li>
+ <li>Spoon the batter into the lined cupcakes pan, dividing between all 24. Bake for 20-15 minutes or until a toothpick inserted comes out clean. Let cool for 5 minutes in the pan and then remove to a wire rack to cool completely.</li>
+<li> To make the buttercream, beat the softened butter in a stand mixer for 2-3 minutes until light in color and fluffy. Beat in the powdered sugar, vanilla and enough of the heavy cream or milk to make a spreadable consistency. Beat the frosting on high for 3-4 minutes or until very fluffy.</li>
+  <li>Make the strawberry filling by sprinkling the granulated sugar over the finely diced strawberries. Let sit for 15 minutes until the strawberries release their juices.</li>
+<li>To assemble the cupcakes, spread a small amount of frosting on the top of each cooled cupcake, like a mini crumb coat. This will keep the strawberry juices from soaking into the cupcake. Then pipe a circle of buttercream around the outside of each cupcake. Fill the center with a tablespoon or two of the strawberry filling. It is best if the cupcakes are filled with strawberries just a few hours or right before eating them.</li>
+</ol>
+
+</div>
+</div>
+</body>
+</html>
+ 
